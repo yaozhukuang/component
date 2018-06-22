@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/type"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/module_project_selector_project_tree_item"
+    android:ellipsize="end"
+    android:gravity="center"
+    android:lines="1"
+    android:padding="8dp"
+    android:textColor="@color/component_res_colorTextBlack"
+    android:textSize="@dimen/component_res_text16"
+    tools:background="#ffffff"
+    tools:text="测试文字" />
+

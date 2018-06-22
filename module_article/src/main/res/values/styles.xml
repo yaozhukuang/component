@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="module_article_float_animation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/module_article_anim_float_btn_in</item>
+        <item name="android:windowExitAnimation">@anim/module_article_anim_float_btn_out</item>
+    </style>
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolBar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/component_common_toolbar_height"
+    android:background="@color/component_common_colorToolbar"
+    app:navigationIcon="@drawable/component_common_ic_arrow_left_black">
+
+    <TextView
+        android:id="@+id/toolbarTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/component_res_colorTextBlack"
+        android:textSize="@dimen/component_res_text17"
+        tools:text="测试标题" />
+
+    <TextView
+        android:id="@+id/toolBarRightText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:singleLine="true"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/component_res_colorTextBlack"
+        android:textSize="@dimen/component_res_text16"
+        android:visibility="gone"
+        tools:text="测试" />
+</android.support.v7.widget.Toolbar>

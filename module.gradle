@@ -1,0 +1,70 @@
+if (canRunAlone.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+
+}
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion             rootProject.ext.configuration.compile_sdk_version
+    defaultConfig {
+
+        minSdkVersion             rootProject.ext.configuration.mini_sdk_version
+        targetSdkVersion          rootProject.ext.configuration.target_sdk_version
+        versionCode               rootProject.ext.configuration.version_code
+        versionName               rootProject.ext.configuration.version_name
+
+        def moduleName = project.getName()
+        // 业务组件资源前缀，避免冲突
+        resourcePrefix "${moduleName}_"
+        if(canRunAlone.toBoolean()) {
+            applicationId        "com.zw.yzk.module.${moduleName}"
+        }
+        //注解参数，在自定义注解里面用到
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
+
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            //设置代码以及资源路径
+            if (canRunAlone.toBoolean()) {
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+                java.srcDirs = ['src/main/java', 'src/main/debug/java']
+                res.srcDirs = ['src/main/res', 'src/main/debug/res']
+            } else {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':component_common')
+    kapt project(':component_compiler')
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}

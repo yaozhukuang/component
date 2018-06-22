@@ -1,0 +1,24 @@
+<resources>
+    <string name="module_account_app_name">mAccount</string>
+    <string name="module_account_login">登录</string>
+    <string name="module_account_login_failed">登录失败</string>
+    <string name="module_account_register">注册</string>
+    <string name="module_account_register_failed">注册失败</string>
+    <string name="module_account_register_success">注册成功</string>
+    <string name="module_account_account">用户名</string>
+    <string name="module_account_password">密码</string>
+    <string name="module_account_article">文章</string>
+    <string name="module_account_website">网址</string>
+    <string name="module_account_navigation">导航</string>
+    <string name="module_account_settings">设置</string>
+    <string name="module_account_download">测试下载</string>
+    <string name="module_account_not_login_hint">用户未登录，请登录后操作</string>
+    <string name="module_account_not_login">点击头像登录</string>
+    <string name="module_account_please_input_account">请输入账号</string>
+    <string name="module_account_please_input_password">请输入密码</string>
+    <string name="module_account_password_repeat">再次输入密码</string>
+    <string name="module_account_password_check_failed">两次密码输入不一致</string>
+    <string name="module_account_clear_cache">清除缓存</string>
+    <string name="module_account_logout">退出登录</string>
+    <string name="module_account_clear_success">清除成功</string>
+</resources>

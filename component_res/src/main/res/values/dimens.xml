@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="component_res_text12">12sp</dimen>
+    <dimen name="component_res_text13">13sp</dimen>
+    <dimen name="component_res_text14">14sp</dimen>
+    <dimen name="component_res_text15">15sp</dimen>
+    <dimen name="component_res_text16">16sp</dimen>
+    <dimen name="component_res_text17">17sp</dimen>
+    <dimen name="component_res_text18">18sp</dimen>
+
+    <dimen name="component_res_bottom_menu_height">44dp</dimen>
+    <dimen name="component_res_lr_padding">16dp</dimen>
+    <dimen name="component_res_li_head_size">30dp</dimen>
+    <dimen name="component_res_divide">2px</dimen>
+</resources>

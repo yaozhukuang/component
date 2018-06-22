@@ -1,0 +1,21 @@
+apply plugin: 'com.android.library'
+apply from: '../component.gradle'
+
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+
+    api rootProject.ext.libraries.kotlin
+    api rootProject.ext.libraries.android_support_compat
+    api rootProject.ext.libraries.android_support_constraint
+    api rootProject.ext.libraries.android_support_recyclerview
+    api rootProject.ext.libraries.android_support_cardview
+    api rootProject.ext.libraries.gson
+    api rootProject.ext.libraries.timber
+    api rootProject.ext.libraries.glide
+    api rootProject.ext.libraries.glide_intergration
+    api rootProject.ext.libraries.greendao
+    api rootProject.ext.libraries.cookieJar
+    api rootProject.ext.libraries.flex_layout
+
+}

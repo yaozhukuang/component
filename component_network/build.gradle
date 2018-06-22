@@ -1,0 +1,13 @@
+apply plugin: 'com.android.library'
+apply from: '../component.gradle'
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    api rootProject.ext.libraries.retrofit2
+    api rootProject.ext.libraries.retrofit2_adapter_rxjava
+    api rootProject.ext.libraries.retrofit2_adapter_gson
+    api rootProject.ext.libraries.retrofit2_adapter_scalars
+    api rootProject.ext.libraries.rxandroid
+}

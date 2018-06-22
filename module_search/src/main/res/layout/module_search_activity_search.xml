@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/component_res_colorWhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/component_common_toolbar_height"
+        android:background="@color/component_res_colorPrimary"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:paddingTop="8dp">
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/module_search_shape_search"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/module_search_svg_search"
+            android:gravity="center_vertical"
+            android:hint="@string/module_search_search"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:singleLine="true"
+            android:textSize="@dimen/component_res_text14" />
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="13dp"
+            android:gravity="center"
+            android:text="@string/module_search_cancel"
+            android:textColor="#CCCCCC"
+            android:textSize="@dimen/component_res_text14" />
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/resultList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutHotWord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="@string/module_search_hot_word"
+            android:layout_width="wrap_content"
+            android:textColor="@color/component_res_colorTextBlack"
+            android:textSize="@dimen/component_res_text16"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"/>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/hotContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:alignContent="flex_start"
+            app:alignItems="flex_start"
+            app:flexWrap="wrap" />
+    </LinearLayout>
+</LinearLayout>

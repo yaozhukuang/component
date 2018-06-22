@@ -1,0 +1,63 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+//if(!canRunAlone) {
+//    apply plugin: 'com.zw.yzk.component.gradle.combine'
+//}
+
+
+android {
+    compileSdkVersion             rootProject.ext.configuration.compile_sdk_version
+    defaultConfig {
+        applicationId             "com.zw.yzk.component"
+        minSdkVersion             rootProject.ext.configuration.mini_sdk_version
+        targetSdkVersion          rootProject.ext.configuration.target_sdk_version
+        versionCode               rootProject.ext.configuration.version_code
+        versionName               rootProject.ext.configuration.version_name
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
+
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+
+repositories {
+    maven {// 添加Maven的本地依赖
+        url uri('../repository')
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':component_common')
+    kapt project(':component_compiler')
+
+    if(!canRunAlone) {
+        implementation project(':module_account')
+        implementation project(':module_project')
+        implementation project(':module_article')
+        implementation project(':module_search')
+    }
+
+    testImplementation rootProject.ext.testingLibraries.junit
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}

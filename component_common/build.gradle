@@ -1,0 +1,37 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'org.greenrobot.greendao'
+apply from: '../component.gradle'
+
+android {
+
+    defaultConfig {
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
+    }
+
+}
+
+greendao {
+    targetGenDir 'src/main/java'
+    daoPackage 'com.zw.yzk.component.common.greendao.entity'
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    api project(':component_sdk')
+    api project(':component_res')
+    api project(':component_widget')
+    api project(':component_network')
+    api project(':component_annotation')
+    api project(':component_adapter')
+    api project(':component_banner')
+
+    kapt project(':component_compiler')
+    kapt rootProject.ext.libraries.glider_complier
+}

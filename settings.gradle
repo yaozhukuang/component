@@ -1,0 +1,3 @@
+include ':app', ':module_account', ':module_article', ':module_project', ':component_adapter',
+        ':component_sdk', ':component_res',':component_annotation',':component_banner', ':module_search',
+        ':component_common', ':component_widget', ":component_network", ':component_compiler'

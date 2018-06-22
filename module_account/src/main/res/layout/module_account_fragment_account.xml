@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/component_res_colorWhite"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.zw.yzk.module.account.ui.widget.MeBackground
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="260dp" />
+
+        <ImageView
+            android:id="@+id/head"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/component_res_ic_default_head" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/component_res_colorWhite"
+            android:textSize="@dimen/component_res_text18"
+            tools:text="测试" />
+    </FrameLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layoutArticle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/component_res_selector_no_bound"
+        android:paddingEnd="12dp"
+        android:paddingStart="12dp">
+
+        <ImageView
+            android:id="@+id/symbolArticle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/module_account_svg_article"
+            app:layout_constraintBottom_toBottomOf="@+id/article"
+            app:layout_constraintEnd_toStartOf="@+id/article"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/article" />
+
+        <TextView
+            android:id="@+id/article"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/module_account_article"
+            android:gravity="center_vertical"
+            android:textColor="@color/component_res_colorTextBlack"
+            app:layout_constraintStart_toEndOf="@+id/symbolArticle" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/component_res_divide"
+            android:background="@color/component_res_colorGray"
+            app:layout_constraintStart_toStartOf="@+id/article"
+            app:layout_constraintTop_toBottomOf="@+id/article" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layoutWebsite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/component_res_selector_no_bound"
+        android:paddingEnd="12dp"
+        android:paddingStart="12dp">
+
+        <ImageView
+            android:id="@+id/symbolWebsite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/module_account_svg_website"
+            app:layout_constraintBottom_toBottomOf="@+id/website"
+            app:layout_constraintEnd_toStartOf="@+id/website"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/website" />
+
+        <TextView
+            android:id="@+id/website"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/module_account_website"
+            android:gravity="center_vertical"
+            android:textColor="@color/component_res_colorTextBlack"
+            app:layout_constraintStart_toEndOf="@+id/symbolWebsite" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/component_res_divide"
+            android:background="@color/component_res_colorGray"
+            app:layout_constraintStart_toStartOf="@+id/website"
+            app:layout_constraintTop_toBottomOf="@+id/website" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layoutNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/component_res_selector_no_bound"
+        android:paddingEnd="12dp"
+        android:paddingStart="12dp">
+
+        <ImageView
+            android:id="@+id/symbolNavigation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/module_account_svg_navigation"
+            app:layout_constraintBottom_toBottomOf="@+id/navigation"
+            app:layout_constraintEnd_toStartOf="@+id/navigation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/navigation" />
+
+        <TextView
+            android:id="@+id/navigation"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/module_account_navigation"
+            android:gravity="center_vertical"
+            android:textColor="@color/component_res_colorTextBlack"
+            app:layout_constraintStart_toEndOf="@+id/symbolNavigation" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/component_res_divide"
+            android:background="@color/component_res_colorGray"
+            app:layout_constraintStart_toStartOf="@+id/navigation"
+            app:layout_constraintTop_toBottomOf="@+id/navigation" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layoutSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/component_res_selector_no_bound"
+        android:paddingEnd="12dp"
+        android:paddingStart="12dp">
+
+        <ImageView
+            android:id="@+id/symbolSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/module_account_svg_settings"
+            app:layout_constraintBottom_toBottomOf="@+id/settings"
+            app:layout_constraintEnd_toStartOf="@+id/settings"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/settings" />
+
+        <TextView
+            android:id="@+id/settings"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/module_account_settings"
+            android:gravity="center_vertical"
+            android:textColor="@color/component_res_colorTextBlack"
+            app:layout_constraintStart_toEndOf="@+id/symbolSettings" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/component_res_divide"
+            android:background="@color/component_res_colorGray"
+            app:layout_constraintStart_toStartOf="@+id/settings"
+            app:layout_constraintTop_toBottomOf="@+id/settings" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layoutDownload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/component_res_selector_no_bound"
+        android:paddingEnd="12dp"
+        android:paddingStart="12dp">
+
+        <ImageView
+            android:id="@+id/symbolDownload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/module_account_svg_download"
+            app:layout_constraintBottom_toBottomOf="@+id/download"
+            app:layout_constraintEnd_toStartOf="@+id/download"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/download" />
+
+        <TextView
+            android:id="@+id/download"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/module_account_download"
+            android:gravity="center_vertical"
+            android:textColor="@color/component_res_colorTextBlack"
+            app:layout_constraintStart_toEndOf="@+id/symbolDownload" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/component_res_divide"
+            android:background="@color/component_res_colorGray"
+            app:layout_constraintStart_toStartOf="@+id/download"
+            app:layout_constraintTop_toBottomOf="@+id/download" />
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

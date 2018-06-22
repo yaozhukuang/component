@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/component_res_colorGray"
+    android:orientation="vertical">
+
+    <include layout="@layout/component_common_layout_tool_bar" />
+
+    <TextView
+        android:id="@+id/clear"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/component_res_selector_no_bound"
+        android:gravity="center_vertical"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp"
+        android:text="@string/module_account_clear_cache"
+        android:textColor="@color/component_res_colorTextBlack"
+        android:textSize="@dimen/component_res_text16" />
+
+    <TextView
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/component_res_selector_no_bound"
+        android:gravity="center"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp"
+        android:text="@string/module_account_logout"
+        android:textColor="@color/component_res_colorTextBlack"
+        android:textSize="@dimen/component_res_text16" />
+</LinearLayout>

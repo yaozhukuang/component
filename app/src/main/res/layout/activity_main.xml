@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/component_res_colorGray">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomMenu"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@color/component_res_colorWhite" />
+
+    <com.zw.yzk.component.widget.view.bottommenu.BottomMenu
+        android:id="@+id/bottomMenu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/component_res_bottom_menu_height"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container" />
+</android.support.constraint.ConstraintLayout>

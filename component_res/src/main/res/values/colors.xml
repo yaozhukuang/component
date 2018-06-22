@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="component_res_transparent">#00000000</color>
+    <color name="component_res_colorPrimary">@color/component_res_colorRed</color>
+    <color name="component_res_colorPrimaryDark">@color/component_res_colorRedDark</color>
+    <color name="component_res_colorAccent">#FF4081</color>
+    <color name="component_res_colorWhite">#FFFFFF</color>
+    <color name="component_res_colorGray">#F5F5F5</color>
+    <color name="component_res_colorRed">#E51C23</color>
+    <color name="component_res_colorRedDark">#E51C23</color>
+    <color name="component_res_colorTextBlack">#333333</color>
+    <color name="component_res_colorTextMiddle">#666666</color>
+    <color name="component_res_colorTextLight">#999999</color>
+    <color name="component_res_colorDivide">#E1E1E1</color>
+</resources>

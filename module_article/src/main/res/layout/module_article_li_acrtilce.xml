@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/component_res_lr_padding"
+    tools:background="@color/component_res_colorWhite">
+
+    <ImageView
+        android:id="@+id/head"
+        android:layout_width="@dimen/component_res_li_head_size"
+        android:layout_height="@dimen/component_res_li_head_size"
+        android:scaleType="fitCenter"
+        android:src="@drawable/component_res_ic_default_head" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:textColor="@color/component_res_colorTextBlack"
+        android:textSize="@dimen/component_res_text13"
+        app:layout_constraintBottom_toBottomOf="@+id/head"
+        app:layout_constraintStart_toEndOf="@+id/head"
+        app:layout_constraintTop_toTopOf="@+id/head"
+        tools:text="皮卡丘" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/component_res_colorTextBlack"
+        android:textSize="@dimen/component_res_text16"
+        app:layout_constraintTop_toBottomOf="@+id/head"
+        tools:text="测试标题吃标题" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/component_res_colorTextLight"
+        android:textSize="@dimen/component_res_text14"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        tools:text="报道指出，好奇号火星探测器于2011年11月发射，当时被称作有史以来技术最先进的火星车。2012年8月，好奇号成功登陆火星表面的盖尔撞击坑" />
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/component_res_colorTextLight"
+        android:textSize="@dimen/component_res_text12"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        tools:text="Android/干货" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/component_res_colorTextLight"
+        android:textSize="@dimen/component_res_text12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        tools:text="时间: 2015-05-14" />
+
+</android.support.constraint.ConstraintLayout>

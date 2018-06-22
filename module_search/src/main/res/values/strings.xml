@@ -1,0 +1,7 @@
+<resources>
+    <string name="module_search_app_name">mSearch</string>
+    <string name="module_search_search">搜索</string>
+    <string name="module_search_cancel">取消</string>
+    <string name="module_search_hot_word">搜索热词</string>
+    <string name="module_search_empty_search_result">暂无搜索结果</string>
+</resources>

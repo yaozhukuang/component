@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zw.yzk.module.project" >
+
+    <application>
+        <activity
+            android:name=".com.zw.yzk.module.project.ui.activity.ProjectListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+    </application>
+</manifest>

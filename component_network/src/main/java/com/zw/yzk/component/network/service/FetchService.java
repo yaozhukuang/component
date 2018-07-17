@@ -21,17 +21,23 @@ import retrofit2.http.QueryMap;
 public interface FetchService {
 
     @POST("{path}")
-    Observable<ResponseBody> post(
+    Observable<ResponseBody> postBody(
             @Path(value = "path", encoded = true) String path,
             @HeaderMap Map<String, String> headerMap,
             @Body RequestBody body);
 
     @FormUrlEncoded
     @POST("{path}")
-    Observable<ResponseBody> post(
+    Observable<ResponseBody> postField(
             @Path(value = "path", encoded = true) String path,
             @HeaderMap Map<String, String> headerMap,
             @FieldMap Map<String, String> params);
+
+    @POST("{path}")
+    Observable<ResponseBody> postQuery(
+            @Path(value = "path", encoded = true) String path,
+            @HeaderMap Map<String, String> headerMap,
+            @QueryMap Map<String, String> params);
 
     @Multipart
     @POST("{path}")

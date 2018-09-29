@@ -17,7 +17,7 @@ class RegisterRepository: BaseRepository<LoginTask>() {
         task.params["username"] = task.account
         task.params["password"] = task.password
         task.params["repassword"] = task.password
-        return service.post(REGISTER, task.headers, task.params)
+        return service.postField(REGISTER, task.headers, task.params)
     }
 
     override fun getDataTransformer(): ResponseTransformer<LoginResponse> {

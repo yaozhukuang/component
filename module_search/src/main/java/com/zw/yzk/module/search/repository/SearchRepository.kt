@@ -13,7 +13,7 @@ class SearchRepository: BaseRepository<SearchTask>() {
     override fun connectServer(task: SearchTask): Observable<*> {
         val url = "$SEARCH${task.index}$GSON"
         task.params["k"] = task.key
-        return service.post(url, task.headers, task.params)
+        return service.postField(url, task.headers, task.params)
     }
 
     override fun getDataTransformer(): ResponseTransformer<SearchResponse> {

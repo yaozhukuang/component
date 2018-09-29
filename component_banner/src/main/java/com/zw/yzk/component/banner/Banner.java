@@ -142,7 +142,13 @@ public class Banner extends FrameLayout {
      */
     @SuppressWarnings("unchecked")
     public <T> void startBanner(List<T> list) {
+        if (list == null || list.isEmpty()) {
+            return;
+        }
         adapter.setData(list);
+        //让列表从中间开始，这样就可以前后滑动
+        int count = (adapter.getItemCount() / (2 * adapter.getDataCount())) * adapter.getDataCount();
+        recyclerView.scrollToPosition(count);
         //添加indicator
         addIndicator();
         //开始滚动

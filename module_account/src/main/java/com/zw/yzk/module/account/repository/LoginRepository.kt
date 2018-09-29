@@ -16,7 +16,7 @@ class LoginRepository: BaseRepository<LoginTask>() {
     override fun connectServer(task: LoginTask): Observable<*> {
         task.params["username"] = task.account
         task.params["password"] = task.password
-        return service.post(LOGIN, task.headers, task.params)
+        return service.postField(LOGIN, task.headers, task.params)
     }
 
     override fun getDataTransformer(): ResponseTransformer<LoginResponse> {
